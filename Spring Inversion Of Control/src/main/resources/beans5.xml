@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="c1" class="assignment5.Country">
+<property name="countryId"><value>C001</value></property>
+<property name="countryName"><value>India</value></property>
+</bean>
+<bean id="c2" class="assignment5.Country">
+<property name="countryId"><value>C002</value></property>
+<property name="countryName"><value>Australia</value></property>
+</bean>
+<bean id="p1" class="assignment5.Player">
+<property name="playerId"><value>P001</value></property>
+<property name="playerName"><value>Sachin</value></property>
+<property name="country"><ref bean="c1"/></property>
+</bean>
+<bean id="p2" class="assignment5.Player">
+<property name="playerId"><value>P002</value></property>
+<property name="playerName"><value>Virat Kohli</value></property>
+<property name="country"><ref bean="c1"/></property>
+</bean>
+<bean id="p3" class="assignment5.Player">
+<property name="playerId"><value>P003</value></property>
+<property name="playerName"><value>MS Dhoni</value></property>
+<property name="country"><ref bean="c1"/></property>
+</bean>
+<bean id="p4" class="assignment5.Player">
+<property name="playerId"><value>P004</value></property>
+<property name="playerName"><value>Steve Smith</value></property>
+<property name="country"><ref bean="c2"/></property>
+</bean>
+<bean id="p5" class="assignment5.Player">
+<property name="playerId"><value>P005</value></property>
+<property name="playerName"><value>David Warner</value></property>
+<property name="country"><ref bean="c2"/></property>
+</bean>
+<bean id="Player" class="assignment5.Player" autowire="default">
+</bean>
+<bean id="Country" class="assignment5.Country">
+<property name="countryId"><value>C002</value></property>
+<property name="countryName"><value>Australia</value></property>
+</bean></beans>

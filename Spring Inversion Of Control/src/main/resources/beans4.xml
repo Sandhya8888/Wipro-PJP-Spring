@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="t1" class="assignment4.Test">
+<property name="testId"><value>T001</value></property>
+<property name="testTitle"><value>Core Java Test</value></property>
+<property name="testMarks"><value>80</value></property>
+</bean>
+<bean id="s1" class="assignment4.Student">
+<property name="studentId"><value>S001</value></property>
+<property name="studentName"><value>Steve</value></property>
+<property name="studentTest">
+<ref bean="t1"/>
+</property>
+</bean>
+<bean id="t2" class="assignment4.Test">
+<property name="testId"><value>T001</value></property>
+<property name="testTitle"><value>Oracle Test</value></property>
+<property name="testMarks"><value>83</value></property>
+</bean>
+<bean id="s2" class="assignment4.Student">
+<property name="studentId"><value>S002</value></property>
+<property name="studentName"><value>Roy</value></property>
+<property name="studentTest">
+<ref bean="t2"/>
+</property>
+</bean>
+</beans>
